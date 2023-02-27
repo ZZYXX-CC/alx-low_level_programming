@@ -1,17 +1,21 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code
- * Return: Always 0.
+ * _strcpy - function that prints a copy of a string using pointers
+ * @dest: the directions goal.
+ * @src: brint the string to copy with pointers.
+ * Return: xxx
  */
-int main(void)
+char *_strcpy(char *dest, char *src)
 {
-	char s1[98];
-	char *ptr;
+	int i = 0, j;
 
-	ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
-	printf("%s", s1);
-	printf("%s", ptr);
-	return (0);
+	while (src[i] != '\0')
+		i++;
+	j = i;
+	for (i = 0; i <= j; i++)
+	{
+		dest[i] = src[i];
+	}
+	return (dest);
 }
